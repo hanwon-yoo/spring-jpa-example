@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<appender name="DEFAULT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] [%-5level] %logger{36}[%line] - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="jdbc.sqlonly"        level="ERROR"/>
+	<logger name="jdbc.sqltiming"      level="INFO"/>
+	<logger name="jdbc.audit"          level="INFO"/>
+	<logger name="jdbc.resultset"      level="ERROR"/>
+	<logger name="jdbc.resultsettable" level="ERROR"/>
+	<logger name="jdbc.connection"     level="INFO"/>
+
+	<root level="DEBUG">
+		<appender-ref ref="DEFAULT" />
+	</root>
+
+</configuration>
