@@ -1,11 +1,9 @@
 package hwyoo.sample.spring.entity;
 
+import hwyoo.sample.spring.enumerate.RoleType;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -22,5 +20,8 @@ public class Member implements Serializable {
     private String name;
 
     private int age;
+
+    @Enumerated(EnumType.STRING)
+    private RoleType roleType;
 
 }
